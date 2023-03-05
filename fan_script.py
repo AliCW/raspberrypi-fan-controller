@@ -13,14 +13,12 @@ GPIO.setup(fanPin, GPIO.OUT) #defines the fan pin as an output pin
 def fanOn():
     tempRaw = subprocess.check_output("vcgencmd measure_temp", shell=True).strip()
     tempString = tempRaw.decode("utf-8") #decodes the output into a string
-    #print(tempString)
     tempStrLeft = tempString.lstrip("btemop=")
     tempStrRight = tempStrLeft.rstrip("'C")
-    tempreture = float(tempStrRight)
-    if tempreture >= 60.0: 
-        #print("hot hot hot")
+    temperature = float(tempStrRight)
+    if temperature >= 60.0: 
         GPIO.output(14,True) #turns the fan on
-    if tempreture < 45.0: 
+    if temperature < 45.0: 
         GPIO.output(14,False) #turns the fan off
         
 schedule.every(10).seconds.do(fanOn) #runs the fan_on task every ten seconds
