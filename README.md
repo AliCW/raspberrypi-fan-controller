@@ -1,6 +1,6 @@
 # raspberrypi-fan-controller
 
-This program serves to turn your 5v-fan on/off when the pi reaches a certain temperature. This is set to 60°c by default and will turn off when cooled to 45°c. The script utilizes a controlled infinte loop to consisitantly monitor the temperature every 10 seconds. It therefore should be setup so as to run when the pi is first turned on.
+This program serves to turn your 5v-fan on/off when the pi reaches a certain temperature. This is set to 60°c by default and will turn off when cooled to 45°c, temperature is measured in centigrade. The script utilizes a controlled infinte loop to consisitantly monitor the temperature every 10 seconds. It therefore should be setup so as to run when the pi is first turned on.
 
 The script utilizes < vcgencmd measure_temp > to find the current temperature of the pi.
 
