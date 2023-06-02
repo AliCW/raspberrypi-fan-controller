@@ -6,7 +6,7 @@ The script utilizes < vcgencmd measure_temp > to find the current temperature of
 
 ## Setup
 
-Use an S8050 transistor to communicate with the pi & control the fan, you will only need these & wire to connect the circuit making this method quite easy to perform.  The below schematic shows the basic layout, the script defines GPIO14 as default pin to communicate with, it should work with other pins if you wish to change this in your setup. Connections to the GPIO pins & transistor were all performed using dupont connectors.
+Use a S8050 transistor to communicate with the pi & control the fan, you will only need these & wire to connect the circuit making this method quite easy to perform.  The below schematic shows the basic layout, the script defines GPIO14 as default pin to communicate with, it should work with other pins if you wish to change this in your setup. Connections to the GPIO pins & transistor were all performed using dupont connectors.
 
 ![schematic](wiring_schematic.png)
 
